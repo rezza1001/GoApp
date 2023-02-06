@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnly_contentBody"
+    android:orientation="vertical"
+    android:background="@color/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rvly_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/imvw_back"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:src="@drawable/ic_arrow_back_24"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:tint="@color/white" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/imvw_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/textWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/edit_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+   <ImageView
+       android:id="@+id/imvw_photo"
+       android:layout_above="@+id/lnly_action"
+       android:layout_below="@+id/rvly_header"
+       android:src="@drawable/default_kapal"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/lnly_action"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/mrly_gallery"
+            app:mrl_rippleOverlay="true"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:background="@color/primary"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="15sp"
+                android:textColor="@color/textWhite"
+                android:gravity="center"
+                android:text="@string/select_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

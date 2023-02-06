@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_body"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="3dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="@color/dialog_background"
+        app:cardUseCompatPadding="true"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imvw_back"
+                android:visibility="gone"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/yukom_icon_name"
+                android:layout_width="152dp"
+                android:layout_height="112dp"/>
+
+            <LinearLayout
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:layout_marginTop="29dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/imvw_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="LOGIN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:background="@drawable/editext_standard"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_marginStart="9dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/account_circle"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"/>
+                    <EditText
+                        android:id="@+id/edtx_username"
+                        android:background="#00000000"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="15sp"
+                        android:hint="@string/username"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/editext_standard"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_marginStart="9dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/lock"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"/>
+                    <EditText
+                        android:id="@+id/edtx_password"
+                        android:background="#00000000"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="15sp"
+                        android:inputType="textPassword"
+                        android:hint="@string/password"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="10"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.vma.goapp.ui.component.VmaButton
+                        android:id="@+id/bbtn_login"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <com.vma.goapp.ui.component.VmaButton
+                        android:id="@+id/bbtn_cancel"
+                        android:layout_marginStart="26dp"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:text="@string/donot_have_account"
+                        android:textSize="14sp"
+                        android:textColor="#ccffffff"
+                        android:fontFamily="@font/roboto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txvw_register"
+                        android:text="@string/register"
+                        android:paddingStart="10dp"
+                        android:shadowColor="@color/primaryDark"
+                        android:shadowRadius="2"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:paddingEnd="15dp"
+                        android:textColor="@color/primaryLight"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

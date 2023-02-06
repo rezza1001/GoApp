@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/activity_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rvly_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        
+        <ImageView
+            android:id="@+id/imvw_back"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_logbook"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/imvw_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/textWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                android:text="@string/e_logbook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/rvly_header"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/weatherActivity"
+        android:layout_marginBottom="-10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvw_data"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/lnly_empty"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_dpi"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:tint="#b0bec5" />
+                <TextView
+                    android:textColor="#b0bec5"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/empty_logbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/fab_add"
+        app:fabSize="normal"
+        app:maxImageSize="40dp"
+        app:backgroundTint="@color/primaryLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

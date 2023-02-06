@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="10"
+    android:background="@color/direction_bg1"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="55dp">
+
+    <RelativeLayout
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imvw_directionDistance"
+            android:src="@drawable/ic_distance"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/imvw_directionDistance"
+            android:fontFamily="@font/roboto"
+            android:text="@string/Distance"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/imvw_directionDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_directiondistance"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txvw_distanceUnit"
+                android:text="nm"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:background="@color/border1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto"
+            android:text="@string/heading"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:weightSum="10"
+            android:layout_marginStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_dstBearing"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="00"
+                android:layout_gravity="center"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:background="@color/border1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto"
+            android:text="@string/destination_position"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:weightSum="10"
+            android:layout_marginStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_dirTo"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="S 00:00:000\nE 00:00:0000"
+                android:layout_gravity="center"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:background="@color/border1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"/>
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/mry_stopDir"
+        android:background="@color/red"
+        app:mrl_rippleOverlay="true"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/ic_close_black_24dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="@color/white" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>

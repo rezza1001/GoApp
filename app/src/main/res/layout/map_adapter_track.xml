@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardElevation="2dp"
+        app:contentPadding="5dp"
+        app:cardBackgroundColor="@color/dialogBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/lnly_selectMenu"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_no"
+                android:text="No."
+                android:layout_marginStart="10dp"
+                android:textColor="@color/text_standard"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txvw_title"
+                android:text="20-05-2022"
+                android:layout_toEndOf="@+id/txvw_no"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/text_standard"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txvw_date"
+                android:text="S 006°36'13.32 | E 100°51'32.04"
+                android:layout_below="@+id/txvw_title"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/textHint"
+                android:layout_alignStart="@+id/txvw_title"
+                android:layout_alignEnd="@+id/txvw_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txvw_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvw_date"
+                android:layout_alignStart="@+id/txvw_title"
+                android:layout_alignEnd="@+id/txvw_title"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="1dp"
+                android:fontFamily="@font/roboto"
+                android:text="Waktu : 20j 10m 30d"
+                android:textColor="@color/text_standard"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txvw_distance"
+                android:background="#FFED05"
+                android:layout_alignTop="@+id/txvw_time"
+                android:layout_alignParentEnd="true"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_bold"
+                android:text="10 Nm"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/weatherActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rvly_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            app:cardBackgroundColor="#735FDA"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="1dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_weather" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/card_icon"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/weather"
+            android:textColor="@color/text_standard"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/rvly_header"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.vma.goapp.ui.weather.WeatherTodayView
+                android:id="@+id/weather_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.vma.goapp.ui.weather.WeatherOtherView
+                        android:id="@+id/weather_tmr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.vma.goapp.ui.weather.WeatherOtherView
+                        android:id="@+id/weather_aftrtmr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

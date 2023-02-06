@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "422050222228",
+    "project_id": "smartfishingapp",
+    "storage_bucket": "smartfishingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422050222228:android:13665e9e1134635f896481",
+        "android_client_info": {
+          "package_name": "com.vma.goapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422050222228-dqrn7kh6vq06iduqhoeqcbosj4hvd4cv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmshyZRaYGz2PX_R1_qGg4Ty6anDhtPyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422050222228-dqrn7kh6vq06iduqhoeqcbosj4hvd4cv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422050222228:android:53a4d9c3c760a2f2896481",
+        "android_client_info": {
+          "package_name": "com.vma.smartfishingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422050222228-dqrn7kh6vq06iduqhoeqcbosj4hvd4cv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmshyZRaYGz2PX_R1_qGg4Ty6anDhtPyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422050222228-dqrn7kh6vq06iduqhoeqcbosj4hvd4cv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

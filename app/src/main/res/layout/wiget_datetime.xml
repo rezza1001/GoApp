@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txvw_time"
+        android:fontFamily="@font/roboto"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="1"
+        android:shadowDx="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/txvw_dateOther"
+        android:fontFamily="@font/roboto"
+        android:text="Kamis, 20 Mei 2021"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="1"
+        android:shadowDx="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:contentPaddingTop="20dp"
+        app:contentPaddingBottom= "20dp"
+        app:contentPaddingLeft="10dp"
+        app:contentPaddingRight="10dp"
+        app:cardBackgroundColor="@color/dialogBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:minHeight="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_name"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto"
+                android:textColor="#00B9FF"
+                android:text="@string/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txvw_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvw_name"
+                android:fontFamily="@font/roboto"
+                android:text="Senin, 20 Januari  2022"
+                android:textColor="@color/text_standard"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txvw_status"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_below="@+id/txvw_no"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Claudy"
+                android:textColor="@color/primary"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imvw_back"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignTop="@+id/txvw_no"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/weather_list" />
+
+            <LinearLayout
+                android:layout_below="@+id/txvw_status"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@drawable/bg_weather_frame"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="15dp"
+                    android:layout_marginEnd="3dp"
+                    android:paddingBottom="15dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txvw_speedTitle"
+                        android:text="@string/speed_and_wind_direcrtion"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_standard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/imvw_wind"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/txvw_speedTitle"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_wind" />
+                    <TextView
+                        android:id="@+id/txvw_wind"
+                        android:text="2.50 - 4.0"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/text_standard"
+                        android:layout_marginStart="6dp"
+                        android:layout_alignTop="@+id/imvw_wind"
+                        android:layout_toEndOf="@+id/imvw_wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txvw_windDir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvw_wind"
+                        android:layout_alignStart="@+id/txvw_wind"
+                        android:layout_marginTop="4dp"
+                        android:lines="1"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Tenggara - Barat Daya"
+                        android:textColor="@color/text_standard"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="@drawable/bg_weather_frame"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txvw_waveTitle"
+                        android:text="@string/wave_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/text_standard"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imvw_wave"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/txvw_waveTitle"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_wave" />
+
+                    <TextView
+                        android:id="@+id/txvw_wave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/imvw_wave"
+                        android:layout_marginStart="6dp"
+                        android:layout_toEndOf="@+id/imvw_wave"
+                        android:fontFamily="@font/roboto"
+                        android:text="Low"
+                        android:lines="1"
+                        android:textColor="@color/text_standard"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txvw_wavehight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvw_wave"
+                        android:layout_alignStart="@+id/txvw_wave"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="2.50 - 4.0 Meter"
+                        android:textColor="@color/text_standard"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

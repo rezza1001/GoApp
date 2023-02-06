@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rvly_dialog"
+    android:background="@color/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_body"
+        app:cardBackgroundColor="@color/dialogBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="15dp"
+        app:contentPaddingBottom="40dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rvly_close"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:background="@color/form_background"
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txvw_title"
+                android:text=""
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/text_standard"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:background="@color/line"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvw_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

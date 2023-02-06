@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/activity_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        
+        <ImageView
+            android:id="@+id/imvw_back"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_dpi"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/imvw_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/textWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                android:text="@string/dpip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#BFffffff"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                android:text="@string/fish_potential_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/weatherActivity"
+        android:layout_marginBottom="-10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txvw_update"
+                android:fontFamily="@font/roboto"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="end"
+                android:textSize="12sp"
+                android:textColor="@color/textHint"
+                android:text="Update : -"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvw_data"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:id="@+id/lnly_empty"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_dpi"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:tint="#b0bec5" />
+                    <TextView
+                        android:textColor="#b0bec5"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/empty_dpi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

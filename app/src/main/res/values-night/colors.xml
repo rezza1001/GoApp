@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="activity_background">#102027</color>
+    <color name="dialog_background">#1c313a</color>
+
+    <color name="editext_background">#c1d5e0</color>
+    <color name="form_background">#1c313a</color>
+    <color name="dialogBackground">#000a12</color>
+    <color name="text_standard">#ffffff</color>
+    <color name="textHint">#80ffffff</color>
+    <color name="border1">#CDD4D9</color>
+    <color name="textBlue2">#0064FE</color>
+    <color name="activity">#263238</color>
+    <color name="weatherActivity">#052D43</color>
+    <color name="line">#d4d4d4</color>
+</resources>

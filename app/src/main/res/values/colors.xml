@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#dd2c00</color>
+    <color name="gold">#ffddb1</color>
+
+    <color name="primaryDark">#001373</color>
+    <color name="primary">#0037A7</color>
+    <color name="primaryLight">#00B9FF</color>
+    <color name="header">#001373</color>
+
+
+    <color name="activity_background">#002A84</color>
+    <color name="dialog">#80000000</color>
+    <color name="dialog_background">#1156BA</color>
+
+    <color name="editext_background">#ffffff</color>
+    <color name="form_background">#4b636e</color>
+    <color name="dialogBackground">#ffffff</color>
+    <color name="text_standard">#FF000000</color>
+    <color name="textHint">#80000000</color>
+    <color name="border1">#CDD4D9</color>
+    <color name="textBlue2">#0064FE</color>
+    <color name="fishmap_coordinate">#48859B</color>
+    <color name="textWhite">#DEFFFFFF</color>
+    <color name="direction_bg1">#104E6B</color>
+    <color name="activity">#F6F7F8</color>
+    <color name="weatherActivity">#E5F0F6</color>
+    <color name="option_button">#E7F0FF</color>
+    <color name="line">#d4d4d4</color>
+
+    <color name="navigation">#AFAFAF</color>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/activity_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rvly_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        
+        <ImageView
+            android:id="@+id/imvw_back"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_logbook"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/imvw_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/textWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                android:text="@string/input_logbook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/rvly_header"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/dialogBackground"
+        android:layout_marginBottom="-10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.vma.goapp.ui.component.EditTextForm
+                android:id="@+id/edtx_fish"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:weightSum="10"
+                android:gravity="bottom"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.vma.goapp.ui.component.EditTextForm
+                    android:id="@+id/edtx_date"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.component.EditTextForm
+                    android:id="@+id/edtx_time"
+                    android:layout_weight="3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.component.VmaButton
+                    android:id="@+id/bbtn_edit"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:weightSum="10"
+                android:gravity="bottom"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.vma.goapp.ui.component.EditTextForm
+                    android:id="@+id/edtx_typeQty"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.component.EditTextForm
+                    android:id="@+id/edtx_qty"
+                    android:layout_weight="5"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <com.vma.goapp.ui.component.VmaButton
+                android:id="@+id/bbtn_save"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.vma.goapp.ui.component.VmaButton
+                android:id="@+id/bbtn_cancel"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

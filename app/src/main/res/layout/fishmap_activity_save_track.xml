@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:background="@color/primary"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <View
+            android:layout_weight="7"
+            android:background="@color/activity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rvly_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <RelativeLayout
+            android:id="@+id/rvly_back"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_arrow_back_24"
+                app:tint="@color/white" />
+        </RelativeLayout>
+        <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="@string/save"
+            android:layout_toEndOf="@+id/rvly_back"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/rvly_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_map"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="7dp"
+                app:cardBackgroundColor="@color/dialogBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.esri.arcgisruntime.mapping.view.MapView
+                    android:id="@+id/map_static"
+                    android:layout_width="match_parent"
+                    android:layout_height="207dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.vma.goapp.ui.component.VmaEditext
+                    android:id="@+id/edtx_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:background="@drawable/bg_editext"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="20dp"
+                    android:minHeight="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txvw_no"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Senin 14 Februari 2022"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/text_standard"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/lnly_sumary"
+                        android:layout_below="@+id/txvw_no"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        
+                        <RelativeLayout
+                            android:background="@drawable/bg_editext"
+                            android:layout_weight="1.1"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp">
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/ic_distance"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/textHint"
+                                android:text="@string/Distance"
+                                android:layout_marginStart="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/txvw_distance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:text="00nm"
+                                android:textColor="@color/text_standard"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:background="@drawable/bg_editext"
+                            android:layout_weight="1.1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp">
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/ic_access_time_24"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                app:tint="#007AA7" />
+                            <TextView
+                                android:textSize="12sp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/textHint"
+                                android:text="@string/time"
+                                android:layout_marginStart="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/txvw_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:text="00:00:00"
+                                android:textColor="@color/text_standard"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:background="@drawable/bg_editext"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp">
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/ic_speed_24"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                app:tint="#007AA7" />
+                            <TextView
+                                android:textSize="12sp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/textHint"
+                                android:text="@string/speed"
+                                android:layout_marginStart="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/txvw_speed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:text="00 m/h"
+                                android:textColor="@color/text_standard"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_below="@+id/lnly_sumary"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:background="@drawable/bg_editext"
+                            android:layout_weight="1.1"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp">
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/ic_start_time"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="3dp"
+                                android:text="@string/Start"
+                                android:textColor="@color/textHint"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txvw_startTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:text="00:00"
+                                android:textColor="@color/text_standard"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:background="@drawable/bg_editext"
+                            android:layout_weight="1.1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp">
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/ic_end_time"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="3dp"
+                                android:text="@string/End"
+                                android:textColor="@color/textHint"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txvw_endTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:text="00:00"
+                                android:textColor="@color/text_standard"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:weightSum="10"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.vma.goapp.ui.component.VmaButton
+                        android:id="@+id/bbtn_save"
+                        android:layout_weight="5"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <com.vma.goapp.ui.component.VmaButton
+                        android:id="@+id/bbtn_cancel"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

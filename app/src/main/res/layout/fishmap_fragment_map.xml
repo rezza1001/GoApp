@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/mapvw_arcgis"
+        android:layout_marginBottom="-20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.vma.goapp.ui.maps.CenterPointView
+        android:id="@+id/cnvw_centerPoint"
+        android:layout_alignTop="@+id/mapvw_arcgis"
+        android:layout_alignStart="@+id/mapvw_arcgis"
+        android:layout_alignEnd="@+id/mapvw_arcgis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rvly_zoomIn"
+            android:background="@drawable/zoom_in_action"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_marginBottom="10dp"
+            android:layout_width="43dp"
+            android:layout_height="43dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rvly_zoomOut"
+            android:background="@drawable/zoom_out_action"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_marginBottom="29dp"
+            android:layout_width="43dp"
+            android:layout_height="43dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rvly_myLocation"
+            android:background="@drawable/my_location_action"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="43dp"
+            android:layout_height="43dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.vma.goapp.ui.maps.RecordButtonView
+            android:id="@+id/rcbvw_record"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:id="@+id/rvly_compassAction"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/imvw_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/navi_cursor_list" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnly_status"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.vma.goapp.ui.maps.DirectionStatusView
+            android:id="@+id/dsvw_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <com.vma.goapp.ui.maps.CoordinateView
+        android:id="@+id/covw_coordinate"
+        android:layout_below="@+id/lnly_status"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.vma.goapp.ui.maps.RecordStatusView
+        android:id="@+id/rcvw_status"
+        android:layout_below="@+id/covw_coordinate"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

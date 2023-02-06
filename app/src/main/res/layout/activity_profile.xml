@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnly_contentBody"
+    android:orientation="vertical"
+    android:background="@color/activity_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rvly_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/imvw_back"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_manage_accounts_24"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="@color/white" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/imvw_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/textWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                android:text="@string/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rvly_picture"
+            android:layout_centerHorizontal="true"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvw_profile"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/white"
+                android:src="@drawable/default_kapal"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txvw_name"
+            android:text="Kapal Name"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textWhite"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="16sp"
+            android:layout_below="@+id/rvly_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txvw_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txvw_status"
+                android:textColor="@color/red"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold"
+                android:text="UNPAID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/imvw_status"
+                android:src="@drawable/ic_unpaid"
+                android:layout_marginStart="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/weatherActivity"
+        android:layout_marginBottom="-10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.vma.goapp.ui.profile.ItemView
+                    android:id="@+id/item_imei"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.profile.ItemView
+                    android:id="@+id/item_owner"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.profile.ItemView
+                    android:id="@+id/item_phone"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.profile.ItemView
+                    android:id="@+id/item_address"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.profile.ItemView
+                    android:id="@+id/item_sipi"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.profile.ItemView
+                    android:id="@+id/item_gt"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.vma.goapp.ui.profile.ItemView
+                    android:id="@+id/item_username"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/mrly_logout"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_rippleDuration="200"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/red"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="25dp"
+                            android:text="LOGOUT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <View
+                            android:background="@color/line"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"/>
+                        <ImageView
+                            android:src="@drawable/ic_logout"
+                            android:layout_marginEnd="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            app:tint="@color/red" />
+                    </RelativeLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

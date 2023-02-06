@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="232dp"
+    android:layout_height="232dp">
+
+    <ImageView
+        android:id="@+id/imvw_compass"
+        android:rotation="-90"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/compass_frame" />
+    <ImageView
+        android:id="@+id/imvw_cource"
+        android:layout_centerInParent="true"
+        android:layout_width="159dp"
+        android:layout_height="159dp"/>
+    <RelativeLayout
+        android:id="@+id/rvly_compassBody"
+        android:layout_alignStart="@+id/imvw_cource"
+        android:layout_alignEnd="@+id/imvw_cource"
+        android:layout_alignTop="@+id/imvw_cource"
+        android:layout_alignBottom="@+id/imvw_cource"
+        android:background="@drawable/bg_compass_info"
+        android:layout_margin="15dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/txvw_courseValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="0\u00B0"
+            android:textColor="@color/white"
+            android:textSize="41sp" />
+        <LinearLayout
+            android:layout_below="@+id/txvw_courseValue"
+            android:gravity="center"
+            android:layout_marginTop="-8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txvw_courseInfo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="U"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/txvw_courseInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="(utara)"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_alignTop="@+id/imvw_cource"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/compass_cursor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:paddingBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/compass_knot" />
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="81dp">
+        <TextView
+            android:id="@+id/txvw_knotTitle"
+            android:text="Knot"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txvw_knotValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvw_knotTitle"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="39sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
